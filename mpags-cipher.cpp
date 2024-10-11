@@ -5,5 +5,7 @@ int main()
     /* This is a 
     Multiline comment */
 
-    std::cout << "Hello World!\n";
+    int my_var{7}
+
+    std::cout << my_var << std::endl;
 }
