@@ -3,8 +3,41 @@
 #include <cmath>
 #include <vector>
 
-int main()
+int main(int argc, char* argv[])
 {
+    const std::vector<std::string> cmdLineArgs { argv, argv+argc };
+
+    for (size_t i{0}; i < cmdLineArgs.size(); i++)
+    {
+        std::cout << "Argument: " << i << " " << cmdLineArgs[i] << std::endl;
+        if (cmdLineArgs[i] == "-h")
+        {
+            std::cout << "This is a description of this command that is helpful." << std::endl;
+        }
+        else if (cmdLineArgs[i] == "--help")
+        {
+            std::cout << "This is a description of this command that is helpful." << std::endl;
+        }
+        else if (cmdLineArgs[i] == "--version")
+        {
+            std::cout << "This is the version information. I assume we're not supposed to return the actual version number because I don't know how to get that" << std::endl;
+        }
+        else if (cmdLineArgs[i] == "-i")
+        {
+            std::string infilename{""};
+            infilename = cmdLineArgs[i+1];
+            std::cout << infilename << std::endl;
+        }
+        else if (cmdLineArgs[i] == "-o")
+        {
+            std::string outfilename{""};
+            outfilename = cmdLineArgs[i+1];
+            std::cout << outfilename << std::endl;
+        }
+    }
+
+    /* Exercise 5
+    
     char in_char{'x'};
     std::string out_str{""};
     while(std::cin >> in_char)
@@ -54,6 +87,10 @@ int main()
     }
     std::cout << out_str << std::endl;
 
+    */
+
+   /* Learning vectors
+
     std::vector<double> vec = {1.2, 3.4, 5.6};
     std::cout << vec.size() << std::endl;
 
@@ -70,4 +107,6 @@ int main()
     {
         std::cout << "Index: " << i << " " << vec[i] << std::endl;
     }
+
+    */
 }
