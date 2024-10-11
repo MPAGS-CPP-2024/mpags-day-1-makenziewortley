@@ -1,78 +1,55 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 int main()
 {
-    // This is a comment
-    /* This is a 
-    Multiline comment */
-
-    int my_var {7};
-    std::cout << my_var << std::endl;
-
-    double my_double {1.2};
-    std::cout << my_double << std::endl;
-
-    std::string msg {"Hello"};
-    std::cout << msg << std::endl;
-
-    const int b {5};
-    std::cout << b << std::endl;
-
-    const double const_double {6.7};
-    std::cout << const_double << std::endl;
-
-    std::string message {"Bonjour"};
-
-    // output "Bonjour"
-    std::cout << message << std::endl;
-
-    // output "B"
-    std::cout  << message[0] << std::endl;
-
-    const double product {my_var * my_double};
-    std::cout << product << std::endl;
-
-    const char letter {message[3]};
-    std::cout << letter << std::endl;
-
-    const int flag {1};
-
-    switch (flag)
+    char in_char{'x'};
+    std::string out_str{""};
+    while(std::cin >> in_char)
     {
-        case 0:
-            // Do something for this value
-            std::cout << my_double << std::endl;
-            break;
+        if (std::isalpha(in_char)) {
+            out_str += std::toupper(in_char);
+            continue;
+        }
+        switch (in_char)
+        {
+            case '1':
+                out_str += "ONE";
+                break;
+            case '2':
+                out_str += "TWO";
+                break;
+            case '3':
+                out_str += "THREE";
+                break;
+            case '4':
+                out_str += "FOUR";
+                break;
+            case '5':
+                out_str += "FIVE";
+                break;
+            case '6':
+                out_str += "SIX";
+                break;
+            case '7':
+                out_str += "SEVEN";
+                break;
+            case '8':
+                out_str += "EIGHT";
+                break;
+            case '9':
+                out_str += "NINE";
+                break;
+            case '0':
+                out_str += "ZERO";
+                break;
+            default:
+                break;
+        }
 
-        case 1:
-            // Do something else for this value
-            std::cout << flag << std::endl;
-            break;
-
-        case 2:
-            // Do something for all other values
-            break;
+        // Ignore any other non-alpha characters.
+        
     }
-
-    std::string print {"Output"};  
-
-    for (int i {0}; i < 10; ++i)
-    {
-        std::cout << print << std::endl;
-    }
-
-    int i{0};
-    while (i < 10)
-    {
-        std::cout << message << std::endl;
-        ++i;
-    }
-
-    int j {0};
-    do
-    {
-        ++j;
-    } while (j < 10);
-    
+    std::cout << out_str << std::endl;
 }
