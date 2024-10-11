@@ -2,8 +2,8 @@
 A simple command line tool for encrypting/decrypting text using classical ciphers.
 Project to learn how to code using C++ and other development tools.
 
-# How to Install
+## How to Install
 
-# Authors
+## Authors
 
-# Documentation
+## Documentation
