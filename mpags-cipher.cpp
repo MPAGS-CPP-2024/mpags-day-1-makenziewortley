@@ -5,7 +5,7 @@ int main()
     /* This is a 
     Multiline comment */
 
-    int my_var{7}
+    int my_var{7};
 
     std::cout << my_var << std::endl;
 }
